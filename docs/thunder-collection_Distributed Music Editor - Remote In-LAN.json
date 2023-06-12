@@ -1,0 +1,156 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Distributed Music Editor - Remote In-LAN",
+    "dateExported": "2023-06-07T23:42:56.319Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "34b6a8c7-5a8e-48c0-b7e3-befb5d5197ba",
+            "colId": "2b4a5e22-c446-4271-a8ff-c7336cbe7a20",
+            "containerId": "",
+            "name": "Reset",
+            "url": "http://192.168.1.10:8000/reset",
+            "method": "POST",
+            "sortNum": 1250,
+            "created": "2023-06-07T23:40:58.205Z",
+            "modified": "2023-06-07T23:41:49.292Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [],
+                "files": [
+                    {
+                        "name": "musicFile",
+                        "value": "c:\\Users\\david\\Documents\\universidade\\cd2023-proj-93444\\test.mp3"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "1629f2c9-73a5-4211-894e-9377dd3aafbf",
+            "colId": "2b4a5e22-c446-4271-a8ff-c7336cbe7a20",
+            "containerId": "",
+            "name": "Submit new music",
+            "url": "http://192.168.1.10:8000/music",
+            "method": "POST",
+            "sortNum": 2500,
+            "created": "2023-06-07T23:40:58.206Z",
+            "modified": "2023-06-07T23:41:57.047Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [],
+                "files": [
+                    {
+                        "name": "musicFile",
+                        "value": "c:\\Users\\david\\Documents\\universidade\\cd2023-proj-93444\\test.mp3"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "cc54111f-15b2-49f8-90fe-88fe3fbd3c83",
+            "colId": "2b4a5e22-c446-4271-a8ff-c7336cbe7a20",
+            "containerId": "",
+            "name": "Get list of musics",
+            "url": "http://192.168.1.10:8000/music",
+            "method": "GET",
+            "sortNum": 5000,
+            "created": "2023-06-07T23:40:58.208Z",
+            "modified": "2023-06-07T23:42:02.926Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "990621de-f5a7-4b33-98cf-e3bc3720e0a1",
+            "colId": "2b4a5e22-c446-4271-a8ff-c7336cbe7a20",
+            "containerId": "",
+            "name": "Process music",
+            "url": "http://192.168.1.10:8000/music/466392",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-06-07T23:40:58.209Z",
+            "modified": "2023-06-07T23:42:10.124Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"instruments\": [\n    1,\n    3,\n    4\n  ]\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ec33724c-4fcf-4100-bcc1-9ca645bd3528",
+            "colId": "2b4a5e22-c446-4271-a8ff-c7336cbe7a20",
+            "containerId": "",
+            "name": "Get progress status",
+            "url": "http://192.168.1.10:8000/music/466392",
+            "method": "GET",
+            "sortNum": 35000,
+            "created": "2023-06-07T23:40:58.210Z",
+            "modified": "2023-06-07T23:42:16.963Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "31701139-6fa7-44e9-b95d-63269a453b87",
+            "colId": "2b4a5e22-c446-4271-a8ff-c7336cbe7a20",
+            "containerId": "",
+            "name": "List jobs",
+            "url": "http://192.168.1.10:8000/job",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-06-07T23:40:58.211Z",
+            "modified": "2023-06-07T23:42:24.361Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "b8ce3ff4-fed5-4add-87b8-37bb44f17873",
+            "colId": "2b4a5e22-c446-4271-a8ff-c7336cbe7a20",
+            "containerId": "",
+            "name": "Get jobs status",
+            "url": "http://192.168.1.10:8000/job/0",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-06-07T23:40:58.212Z",
+            "modified": "2023-06-07T23:42:33.951Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "9f76e7e2-1beb-4efe-a761-6ecaa03ed4b0",
+            "colId": "2b4a5e22-c446-4271-a8ff-c7336cbe7a20",
+            "containerId": "",
+            "name": "Download final file",
+            "url": "http://192.168.1.10:8000/download/combined_466392.mp3",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2023-06-07T23:40:58.213Z",
+            "modified": "2023-06-07T23:42:40.371Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ],
+    "settings": {
+        "runOptions": {
+            "delay": 0,
+            "iterations": 1,
+            "stopOnFail": true,
+            "dataFilePath": ""
+        }
+    }
+}

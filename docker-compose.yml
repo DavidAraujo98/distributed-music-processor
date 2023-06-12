@@ -1,0 +1,28 @@
+version: "3.3"
+
+services:
+    worker01:
+        container_name: worker01
+        image: worker
+        build:
+            context: .
+        environment:
+            - SERVER_IP=host.docker.internal
+        network_mode: bridge
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
+    worker02:
+        container_name: worker02
+        image: worker
+        environment:
+            - SERVER_IP=host.docker.internal
+        network_mode: bridge
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
+    #test:
+    #    container_name: test
+    #    network_mode: bridge
+    #    image: testcontainers/helloworld
+    #    ports:
+    #        - "8880:8080"
+    #        - "8881:8081"
